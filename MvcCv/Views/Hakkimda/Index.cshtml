@@ -1,0 +1,73 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblHakkimda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title"  style="font-size:36px;font-family:Dubai">Hakkimda Listesi</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Ad</th>
+                                        <th>Soyad</th>
+                                        <th>Adres</th>
+                                        <th>Telefon</th>
+                                        <th>Mail</th>
+                                        <th>Aciklama</th>
+                                        <th>Resim</th>
+                                        <th>Duzenle</th>
+                                        <th>Sil</th>
+                                    </tr>
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@x.ID</td>
+                                            <td>@x.Ad</td>
+                                            <td>@x.Soyad</td>
+                                            <td>@x.Adres</td>
+                                            <td>@x.Telefon</td>
+                                            <td>@x.Mail</td>
+                                            <td>@x.Aciklama</td>
+                                            <td>@x.Resim</td>
+                                            <td>
+                                                <a href="/Hakkimda/HakkimdaGetir/@x.ID" class="btn btn-info">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                    Duzenle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Hakkimda/HakkimdaSil/" class="btn btn-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    Sil
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

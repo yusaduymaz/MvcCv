@@ -1,0 +1,37 @@
+﻿@model MvcCv.Models.Entity.TblEgitimlerim
+
+
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Egitim Guncelleme Sayfasi</h2>
+<br />
+<form class="form-group" method="post">
+    <br />
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @placeholder = "ID Yaziniz", @readonly = "readonly" })
+
+    <br />
+    @Html.Label("Baslik")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control", @placeholder = "Baslik Yaziniz" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("AltBaslik")
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control", @placeholder = "Altbaslik Yaziniz" })
+    <br />
+    @Html.Label("AltBaslik2")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control", @placeholder = "Altbaslik2 Yaziniz" })
+    <br />
+    @Html.Label("GNO")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control", @placeholder = "GNO Yaziniz" })
+    @Html.ValidationMessageFor(x => x.GNO, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", @placeholder = "Tarih Yaziniz" })
+    <br />
+    <button class="btn btn-warning">Kaydet</button>
+</form>
+

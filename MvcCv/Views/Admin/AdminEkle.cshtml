@@ -1,0 +1,19 @@
+﻿@model MvcCv.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "AdminEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Admin Ekleme Sayfasi</h2>
+<br />
+<form class="form-group" method="post">
+    <br />
+    @Html.Label("KullaniciAdi")
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control", @placeholder = "Kullanici Adi Yaziniz" })
+    <br />
+    @Html.Label("Sifre")
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", @placeholder = "Sifre Yaziniz" })
+    <br />
+    <button class="btn btn-dark">Kaydet</button>
+</form>

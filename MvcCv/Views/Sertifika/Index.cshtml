@@ -1,0 +1,69 @@
+﻿@using MvcCv.Models.Entity;
+@model List<TblSertifikalarim>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title" style="font-size:36px;font-family:Dubai">Sertifika Listesi</h3>
+                        </div>
+                        <div class="card-header p-2">
+
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    @foreach (var x in Model)
+                                    {
+                                        <!-- timeline time label -->
+                                        <div class="time-label">
+                                            <span class="bg-dark">
+                                                @x.Tarih
+                                            </span>
+                                        </div>
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        <div>
+                                            <i class="fas fa-certificate bg-warning"></i>
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    @x.Aciklama
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="/Sertifika/SertifikaGetir/@x.ID" class="btn btn-primary btn-sm"> <i class="fas fa-pencil-alt"></i> Duzenle</a>
+                                                    <a href="/Sertifika/SertifikaSil/@x.ID" class="btn btn-danger btn-sm"> <i class="fas fa-trash-alt"></i> Sil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                    <a href="/Sertifika/SertifikaEkle/"><button accesskey="" class="btn btn-success">Yeni Sertifika Ekle</button></a>
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+</body>
+</html>

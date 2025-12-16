@@ -1,0 +1,61 @@
+﻿@using MvcCv.Models.Entity;
+@model List<TblAdmin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title" style="font-size:36px;font-family:Dubai">Admin Sayfasi</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Kullanici Adi</th>
+                                        <th>Duzenle</th>
+                                        <th>Hesabi Sil</th>
+                                    </tr>
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@x.ID</td>
+                                            <td>@x.KullaniciAdi</td>
+                                            <td>
+                                                <a href="/Admin/AdminGetir/@x.ID" class="btn btn-info">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                    Duzenle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminSil/@x.ID" class="btn btn-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    Hesabi Sil
+                                                </a>
+                                            </td>
+
+                                        </tr>
+
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                        <a href="/Admin/AdminEkle/"><button accesskey="" class="btn btn-success">Yeni Admin Ekle</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

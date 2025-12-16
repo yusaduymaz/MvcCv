@@ -1,0 +1,28 @@
+﻿@model MvcCv.Models.Entity.TblSosyalMedya
+@{
+    ViewBag.Title = "SosyalMedyaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>SosyalMedya Duzenleme Sayfasi</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @placeholder = "ID", @readonly = "readonly" })
+    @Html.ValidationMessageFor(x => x.Ad, "", new { @style = "color:red" })
+    <br />
+    <br />
+    @Html.Label("Ad")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @placeholder = "Ad Yaziniz" })
+    @Html.ValidationMessageFor(x => x.Ad, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control", @placeholder = "Link Yaziniz" })
+    @Html.ValidationMessageFor(x => x.Ad, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Icon")
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control", @placeholder = "Icon Yaziniz" })
+    <br />
+    <button class="btn btn-warning">Kaydet</button>
+</form>

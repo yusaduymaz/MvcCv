@@ -1,0 +1,65 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblDeneyimlerim>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title"  style="font-size:36px;font-family:Dubai">Deneyim Listem</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Baslik</th>
+                                        <th>AltBaslik</th>
+                                        <th>Tarih</th>
+                                        <th>Duzenle</th>
+                                        <th>Sil</th>
+                                    </tr>
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@x.ID</td>
+                                            <td>@x.Baslik</td>
+                                            <td>@x.AltBaslik</td>
+                                            <td>@x.Tarih</td>
+                                            <td>
+                                                <a href="/Deneyim/DeneyimGetir/@x.ID" class="btn btn-info">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                    Duzenle
+                                                </a>
+                                            </td>
+                                            <td>      
+                                                <a href="/Deneyim/DeneyimSil/@x.ID" class="btn btn-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                    Sil
+                                                </a>
+                                            </td>
+
+                                        </tr>
+
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                        <a href="/Deneyim/DeneyimEkle"><button accesskey="" class="btn btn-success">Yeni Yetenek Ekle</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

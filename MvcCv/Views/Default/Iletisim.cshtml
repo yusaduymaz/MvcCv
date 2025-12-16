@@ -1,0 +1,65 @@
+﻿<style>
+
+    .resume-section-content form .form-control {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid var(--slate);
+        border-radius: 0;
+        color: var(--lightest-slate);
+        padding: 10px 0;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+        .resume-section-content form .form-control:focus {
+            background-color: transparent;
+            box-shadow: none;
+            border-bottom-color: var(--primary-color);
+            color: var(--white);
+        }
+
+    .resume-section-content form label {
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .resume-section-content form .btn-primary {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 10px 30px;
+        border-radius: 4px;
+        font-family: var(--bs-font-monospace);
+        transition: all 0.3s ease;
+    }
+
+        .resume-section-content form .btn-primary:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+</style>
+
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">Contact</h2>
+        <label>Ad Soyad</label>
+        <input type="text" name="AdSoyad" class="form-control" />
+
+        <label>Mail</label>
+        <input type="email" name="Mail" class="form-control" />
+
+        <label>Konu</label>
+        <input type="text" name="Konu" class="form-control" />
+
+        <label>Mesaj</label>
+        <textarea type="text" name="Mesaj" class="form-control"> </textarea>
+        <button type="submit" class="btn btn-primary mt-3">Gönder</button>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblHobilerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title" style="font-size:36px;font-family:Dubai">Hobi Duzenleme Sayfasi</h3>
+                            </div>
+                            <form method="post">
+                                @foreach (var x in Model)
+                                {
+                                    <label>Aciklama 1</label>
+                                    <textarea rows="5" class="form-control" name="Aciklama1">@x.Aciklama1</textarea>
+                                    <label>Aciklama 2</label>
+                                    <textarea rows="5" class="form-control" name="Aciklama2">@x.Aciklama2</textarea>
+                                }
+                                <br />
+                                <button class="btn btn-warning">Kaydet</button>
+                            </form>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+        </section>
+
+    </div>
+</body>
+</html>
