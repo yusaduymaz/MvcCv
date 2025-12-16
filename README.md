@@ -52,6 +52,9 @@ Bu proje, hem **backend (MVC, EF, Authentication)** hem de **frontend (UI, tema 
 
 > Bu bölümde proje arayüzüne ait ekran görüntülerine yer verilmiştir.
 
+(images/1.png)
+ 
+
 ### 🔐 Login & Register Paneli
 
 * Login ekranı (hazır şablon üzerine özelleştirme)
