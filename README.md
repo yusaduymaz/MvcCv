@@ -69,7 +69,7 @@ Bu proje, hem **backend (MVC, EF, Authentication)** hem de **frontend (UI, tema 
 ![Proje Görseli](images/15.png)
 ![Proje Görseli](images/16.png)
 ![Proje Görseli](images/17.png)
-![Proje Görseli](images/)
+![Proje Görseli](images/18.png)
  
 
 ### 🔐 Login & Register Paneli
