@@ -53,6 +53,23 @@ Bu proje, hem **backend (MVC, EF, Authentication)** hem de **frontend (UI, tema 
 > Bu bölümde proje arayüzüne ait ekran görüntülerine yer verilmiştir.
 
 ![Proje Görseli](images/1.png)
+![Proje Görseli](images/2.png)
+![Proje Görseli](images/3.png)
+![Proje Görseli](images/4.png)
+![Proje Görseli](images/5.png)
+![Proje Görseli](images/6.png)
+![Proje Görseli](images/7.png)
+![Proje Görseli](images/8.png)
+![Proje Görseli](images/9.png)
+![Proje Görseli](images/10.png)
+![Proje Görseli](images/11.png)
+![Proje Görseli](images/12.png)
+![Proje Görseli](images/13.png)
+![Proje Görseli](images/14.png)
+![Proje Görseli](images/15.png)
+![Proje Görseli](images/16.png)
+![Proje Görseli](images/17.png)
+![Proje Görseli](images/)
  
 
 ### 🔐 Login & Register Paneli
